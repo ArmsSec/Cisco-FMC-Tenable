@@ -19,6 +19,7 @@ import ConfigParser
 
 Usage
 The script is fed by one user configurable file: “config.cfg” These are the variables used to define the details of the Security Center and FMC that will be used
+Fo username and password it is best to read them from environment variables or in a .env file:
 
 [UserVariables]
 username = <security center username>
