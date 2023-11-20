@@ -6,8 +6,8 @@ Initial project was not updated in a few years and there were some changes on th
 pyTenable is intended to be a pythonic interface into the Tenable application APIs: https://github.com/tenable/pyTenable
 
 Files
-
 import_vuln.py
+
 
 Dependencies
 
@@ -47,6 +47,32 @@ quiet = True
 It is recommended to leave the debug parameter true to help with troubleshooting if you were to have issues.
 Before running the following command ensure that all prerequisites are met and the *.pcks12 file from the FMC is in the same directory. To run the tool simply execute:
 
+Steps
+Create a Build Environment (optional)
+
+First, ensure Python is in $PATH, then run:
+# Clone the repo
+git clone https://github.com/ArmsSec/Cisco-FMC-Tenable
+cd Cisco-FMC-Tenable
+
+# Create a virtual environment and activate it
+python -m venv env
+. venv/bin/activate
+
+# Install dependencies
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+The username and password should be stored in environment variables or in a .env file:
+
+export username=myusername
+export password=mysecretpassword
+OR
+export TSC_access_key = xxxxxxxxxxxxxxxx
+export TSC_secret_key = yyyyyyyyyyyyyyyyy
+
+
+Run the tool
 python import_vuln.py
 
 or
