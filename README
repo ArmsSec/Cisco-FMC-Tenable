@@ -72,6 +72,7 @@ export TACK = xxxxxxxxxxxxxxxx
 export TSCK = yyyyyyyyyyyyyyyyy
 
 OR create a file just like config and include the keys
+access_key=TACK, secret_key=TSCK
 
 Run the tool
 python import_vuln.py
